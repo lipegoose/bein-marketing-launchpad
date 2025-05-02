@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cores customizadas para o useBein
+				bein: {
+					purple: {
+						dark: '#3D1679',
+						DEFAULT: '#6C4EFF',
+					},
+					cyan: '#00E5FF',
 				}
 			},
 			borderRadius: {
@@ -84,12 +93,50 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-light': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'gradient-x': {
+					'0%, 100%': {
+						'background-position': '0% 50%'
+					},
+					'50%': {
+						'background-position': '100% 50%'
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-light': 'pulse-light 2s infinite ease-in-out',
+				'float': 'float 6s infinite ease-in-out',
+				'gradient-x': 'gradient-x 15s ease infinite',
+			},
+			backgroundImage: {
+				'gradient-bein': 'linear-gradient(90deg, #3D1679 0%, #6C4EFF 50%, #00E5FF 100%)',
+				'gradient-hero': 'linear-gradient(135deg, #3D1679 0%, #6C4EFF 50%, #00E5FF 100%)',
+				'mesh-pattern': "url('/mesh-pattern.svg')",
+			},
+			fontSize: {
+				'heading-xl': ['3.5rem', { lineHeight: '1.1' }],
+				'heading-lg': ['2.5rem', { lineHeight: '1.2' }],
+				'heading-md': ['2rem', { lineHeight: '1.3' }],
+				'heading-sm': ['1.5rem', { lineHeight: '1.4' }],
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Montserrat', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
