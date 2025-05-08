@@ -16,5 +16,5 @@ COPY . .
 # Porta exposta (match com vite.config.ts)
 EXPOSE 8080
 
-# Comando padrão
-CMD ["npm", "run", "dev"] 
+# Comando padrão - configurado para permitir hot-reload
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

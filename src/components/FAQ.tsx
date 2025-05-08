@@ -14,6 +14,10 @@ const faqs = [
   {
     question: 'O useBein se integra com outros sistemas de gestão médica?',
     answer: 'Sim, o useBein possui API para integração com os principais sistemas de prontuário eletrônico e agendamento do mercado. Nossa equipe técnica oferece suporte completo para configuração das integrações, facilitando a transição e minimizando impactos operacionais.',
+  }, 
+  {
+    question: 'O Lipe me ama?',
+    answer: 'Sim', 
   },
   {
     question: 'Como funciona a segurança dos dados no useBein?',
